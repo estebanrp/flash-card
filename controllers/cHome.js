@@ -5,7 +5,6 @@ const cHome = {
     getHome: async (req, res) => {
         try {
             const decks = await mHome.getDecksMetada();
-            console.log(decks);
             res.render("home", { decks });
         } catch (err) {
             error.e500(req, res, err);

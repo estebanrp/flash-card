@@ -3,6 +3,7 @@ import cors from 'cors';
 import helmet from 'helmet';
 import path from 'path';
 import routesHome from "./routes/rHome.js";
+import routesDeck from "./routes/rDeck.js";
 import error from "./middlewares/error.js";
 
 
@@ -20,6 +21,7 @@ app.use(cors());
 app.use(helmet());
 
 app.use(routesHome);
+app.use(routesDeck);
 app.use(error.e404);
 
 app.listen(port, () => {

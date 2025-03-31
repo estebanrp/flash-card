@@ -2,18 +2,18 @@ extends layout
 
 block content
   main.container
-    h1.text-center Flash Cards
+    h1.text-center #{title} 
 
     ul.decks-list
-      if decks.length === 0
-        li
-          b.text-center Don't have decks 😃
-      else
-        each deck in decks
-          li 
-            a(href=`/deck/${deck.id}`) #{deck.title}
-            h4 Dificulty: #{deck.difficulty}
-            p Info: #{deck.info}
-            p N° of cards: #{deck.num_cards}
-            
+      h4 #{card.word}
+      button#answer Answer
+      p.hidden #{card.answer}
+      p.hidden #{card.info}
+    
+    button#nextCard
+      a(href=`/deck/${id}?index=${currentIndex + 1}`) Next
+    
+  
+          
+          
             

@@ -4,6 +4,7 @@
     --color2: #4F959D;
     --color3: #98D2C0;
     --color4: #F6F8D5;
+    --colorLetra: #007bff;
 }
 
 body {
@@ -28,7 +29,17 @@ h1 {
     text-align: center;
     font-size: 2em;
     margin-bottom: 20px;
-    background-color: var(--color2);
+}
+
+h1 span {
+    background-color: var(--color3);
+    /* color de fondo */
+    padding: 5px 10px;
+    /* espaciado alrededor del texto */
+    display: inline-block;
+    /* hace que el fondo no ocupe toda la línea */
+    border-radius: 15px;
+    color: var(--colorLetra);
 }
 
 /* Deck List */
@@ -44,30 +55,33 @@ ul.decks-list {
     border-radius: 8px;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease-in-out;
+    text-decoration: none;
 }
 
 .decks-list li:hover {
     transform: scale(1.03);
     background-color: #f0f8ff;
+    text-decoration: none;
 }
 
 /* Deck Links */
 .decks-list a {
     font-size: 1.2em;
     font-weight: bold;
-    color: #007bff;
     text-decoration: none;
     display: block;
     margin-bottom: 5px;
 }
 
-.decks-list a:hover {
-    text-decoration: underline;
+/* Deck Info */
+h2 {
+    color: var(--colorLetra);
+    margin: 5px 0;
 }
 
-/* Deck Info */
-h4, p {
+p {
     margin: 5px 0;
+    text-decoration: none;
 }
 
 /* Message when no decks exist */
@@ -77,4 +91,22 @@ b.text-center {
     font-size: 1.2em;
     color: #777;
     margin-top: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+button#answer {
+    margin-top: 5px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+}
+
+button#answer:hover {
+    background-color: #0056b3;
 }

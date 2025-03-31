@@ -2,7 +2,8 @@ extends layout
 
 block content
   main.container
-    h1.text-center Flash Cards
+    h1
+      span Flash Cards
 
     ul.decks-list
       if decks.length === 0
@@ -10,10 +11,11 @@ block content
           b.text-center Don't have decks 😃
       else
         each deck in decks
-          li 
-            a(href=`/deck/${deck.id}`) #{deck.title}
-            h4 Dificulty: #{deck.difficulty}
-            p Info: #{deck.info}
-            p N° of cards: #{deck.num_cards}
+          a(href=`/deck/${deck.id}`) 
+            li
+              h2 #{deck.title} 
+              p Dificulty: #{deck.difficulty}
+              p Info: #{deck.info}
+              p N° of cards: #{deck.num_cards}
             
             
