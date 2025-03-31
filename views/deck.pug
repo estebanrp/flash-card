@@ -13,14 +13,18 @@ block content
         p.hidden #{card.info}
 
     div.navigation
-      a#prevCard(href=`/deck/${id}/prev?index=${currentIndex}&hasPrev=${hasPrev}&long=${deckLength}`) Prev
-      a#nextCard(href=`/deck/${id}/next?index=${currentIndex}&hasNext=${hasNext}`) Next
+      button#prevCard(
+        data-url=`/deck/${id}/prev?index=${currentIndex}&hasPrev=${hasPrev}&long=${deckLength}`
+        disabled=!hasPrev
+      ) Prev
+      button#nextCard(
+        data-url=`/deck/${id}/next?index=${currentIndex}&hasNext=${hasNext}`
+        disabled=!hasNext
+      ) Next
 
   div.menu-actions
-    a#menuButton(href="/menu") Menu
-    a#editDeck(href=`/deck/${id}/edit`) Edit Deck
-
-  
+    button#menuButton(data-url="/menu") Menu
+    button#editDeck(data-url=`/deck/${id}/edit`) Edit Deck
           
           
             

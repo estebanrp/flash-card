@@ -6,7 +6,8 @@ ans.addEventListener('click', () => {
     });
 });
 
-let next = document.getElementsByClassName('next')
-next.addEventListener('click', () => {
-    
-})
+document.querySelectorAll('button[data-url]').forEach(button => {
+    button.addEventListener('click', () => {
+      window.location.href = button.dataset.url;
+    });
+  });
