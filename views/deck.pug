@@ -4,15 +4,22 @@ block content
   main.container
     h1.text-center #{title} 
 
-    ul.decks-list
+    div.card-container
       h4 #{card.word}
       button#answer Answer
-      p.hidden #{card.answer}
-      p.hidden #{card.info}
-    
-    button#nextCard
-      a(href=`/deck/${id}?index=${currentIndex + 1}`) Next
-    
+      
+      div.answer-container
+        p.hidden #{card.answer}
+        p.hidden #{card.info}
+
+    div.navigation
+      a#prevCard(href=`/deck/${id}/prev?index=${currentIndex}&hasPrev=${hasPrev}&long=${deckLength}`) Prev
+      a#nextCard(href=`/deck/${id}/next?index=${currentIndex}&hasNext=${hasNext}`) Next
+
+  div.menu-actions
+    a#menuButton(href="/menu") Menu
+    a#editDeck(href=`/deck/${id}/edit`) Edit Deck
+
   
           
           

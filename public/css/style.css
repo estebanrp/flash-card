@@ -110,3 +110,94 @@ button#answer {
 button#answer:hover {
     background-color: #0056b3;
 }
+
+/* Navigation Buttons */
+div.navigation {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+a#prevCard,
+a#nextCard {
+    text-decoration: none;
+    background-color: var(--color2);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.2s ease-in-out;
+}
+
+a#prevCard:hover,
+a#nextCard:hover {
+    background-color: var(--color3);
+    color: black;
+}
+
+/* Card Container */
+.card-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra los elementos horizontalmente */
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.answer-container {
+    min-height: 100px; /* Ajusta según el contenido esperado */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+p.hidden {
+    display: none;
+}
+
+/* Answer Button */
+button#answer {
+    margin-top: 10px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: background-color 0.2s ease-in-out;
+}
+
+button#answer:hover {
+    background-color: #0056b3;
+}
+
+div.menu-actions {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Espaciado entre botones */
+    margin-top: 30px;
+}
+
+a#menuButton,
+a#editDeck {
+    text-decoration: none;
+    background-color: var(--color1);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.2s ease-in-out;
+}
+
+a#menuButton:hover,
+a#editDeck:hover {
+    background-color: var(--color3);
+    color: black;
+}
